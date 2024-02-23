@@ -40,7 +40,13 @@
 - Check if it's already sort
 
 ### Step 3 :
-- Algo : \
-	Push into stack_b first two node. \
-	Push half of the stack corresponding to the smallest values. \
+- Algo :
 
+	- Push into *stack_b* the first two node.
+	- Then, push into *stack_b* the half of the stack corresponding to the smallest values, and then the largest values, until there are only 3 nodes left in *stack_a*.
+	- For three nodes, sorting has to be done "manually".
+	- For each node of the *stack_b*, there is a target which is the nearest largest value in the *stack_a*. If there is no largest value, the target will be the smallest value.
+	- Then you have to calculate for each node of the *stack_b*, the cost to get above his target in the *stack_a*.
+	- After that you bring to the top of the *stack_b* the node with the lowest cost and in the *stack_a* the node which is the target of the node of the lowest cost and then push the node above the *stack_b* into the *stack_a* (so the node will be above his target in the *stack_a*).
+	- Do it until the *stack_b* is empty.
+	- At this point all the nodes are almost sort because there are all near their target, but it can be possible that the lowest or the largest are bellow or above the stack so check if it's sort and if not, do some ***ra*** or ***rra***
