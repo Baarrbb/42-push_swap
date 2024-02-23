@@ -11,6 +11,8 @@
 - Get args and check args
 
 ### Step 2 :
+
+```
 - Implement operations :
 	- **sa** *(swap a)* : Swap the first 2 elements at the top of stack ***a***.
 	Do nothing if there is only one or no elements.
@@ -31,6 +33,7 @@
 	- **rrb** *(reverse rotate b)* : Shift down all elements of stack ***b*** by 1.
 	The last element becomes the first one.
 	- **rrr** : ***rra*** and ***rrb*** at the same time.
+```
 
 	[Visualizer](https://vscza.itch.io/push-swap)
 
